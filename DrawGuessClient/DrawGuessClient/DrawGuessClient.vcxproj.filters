@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="网络">
+      <UniqueIdentifier>{2d70705c-6d42-4e75-832e-f251c860b697}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="核心类">
+      <UniqueIdentifier>{0cb969d6-efa1-4eec-abeb-2cca5d8042a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="协议">
+      <UniqueIdentifier>{10ae4122-f58d-4ea0-a48e-2dc26d98e133}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DrawGuessClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawGuessClientDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Registerwin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Net\INet.h">
+      <Filter>网络</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Net\TCPNet.h">
+      <Filter>网络</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Kernel\IKernel.h">
+      <Filter>核心类</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Kernel\TCPKernel.h">
+      <Filter>核心类</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DrawGuessServer\Packdef\Packdef.h">
+      <Filter>协议</Filter>
+    </ClInclude>
+    <ClInclude Include="Mainwin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawPictrue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Hallwin.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DrawGuessClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawGuessClientDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Registerwin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Net\TCPNet.cpp">
+      <Filter>网络</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Kernel\TCPKernel.cpp">
+      <Filter>核心类</Filter>
+    </ClCompile>
+    <ClCompile Include="Mainwin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawPictrue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Hallwin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DrawGuessClient.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DrawGuessClient.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DrawGuessClient.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
