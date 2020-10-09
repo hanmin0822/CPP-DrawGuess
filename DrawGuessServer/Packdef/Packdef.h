@@ -1,22 +1,22 @@
 #ifndef _PACKDEF_H
 #define _PACKDEF_H
 
-#define	MYSQL_HOST	"59.110.174.158"		//MysqlÖ÷»úµØÖ·
-#define	MYSQL_USER	"root"					//MysqlÓÃ»§Ãû
-#define	MYSQL_PWD	"sgzx123456"			//MysqlÃÜÂë
-#define	MYSQL_DB	"draw_guess"			//MysqlÊı¾İ¿â
+#define	MYSQL_HOST	"0.0.0.0"		//Mysqlä¸»æœºåœ°å€
+#define	MYSQL_USER	"root"					//Mysqlç”¨æˆ·å
+#define	MYSQL_PWD	"password"			//Mysqlå¯†ç 
+#define	MYSQL_DB	"draw_guess"			//Mysqlæ•°æ®åº“
 
-#define SERVER_IP	"127.0.0.1"//¿Í»§¶Ë×¨ÓÃ£¬Á¬½ÓµÄ·şÎñÆ÷µØÖ·
-#define _DEFPORT    23356	//TCP¼àÌı¶Ë¿Ú
-#define _DEFSIZE	1024	//µ¥¸ö°ü´óĞ¡
+#define SERVER_IP	"127.0.0.1"//å®¢æˆ·ç«¯ä¸“ç”¨ï¼Œè¿æ¥çš„æœåŠ¡å™¨åœ°å€
+#define _DEFPORT    23356	//TCPç›‘å¬ç«¯å£
+#define _DEFSIZE	1024	//å•ä¸ªåŒ…å¤§å°
 
-#define _DEF_PLAYERMESSAG_SIZE 500		//ÓÃ»§ÁÄÌìÏûÏ¢×î´ó³¤¶È
+#define _DEF_PLAYERMESSAG_SIZE 500		//ç”¨æˆ·èŠå¤©æ¶ˆæ¯æœ€å¤§é•¿åº¦
 
 #define _DEF_STREAMPACKDEF   sizeof(StreamInfo)
 
-#define _DEF_THREADPOOLNUM    1000		//Ïß³Ì³ØÏß³ÌÊıÁ¿
+#define _DEF_THREADPOOLNUM    1000		//çº¿ç¨‹æ± çº¿ç¨‹æ•°é‡
 
-#define _DEF_SEMAPHORENUM    10000		//ĞÅºÅÁ¿ÊıÄ¿
+#define _DEF_SEMAPHORENUM    10000		//ä¿¡å·é‡æ•°ç›®
 
 #define _BEGIN_PROTOCOL_MAP ProtocolMap   m_aryProtocolMapEntries[]=\
 {
@@ -28,11 +28,11 @@
 
 #define _DEF_PROTOCOL_BASE    10
 
-//×¢²áÇëÇó¡¢»Ø¸´
+//æ³¨å†Œè¯·æ±‚ã€å›å¤
 #define _DEF_PROTOCOL_REGISTER_RQ    _DEF_PROTOCOL_BASE +1
 #define _DEF_PROTOCOL_REGISTER_RS    _DEF_PROTOCOL_BASE +2
 
-//µÇÂ¼ÇëÇó¡¢»Ø¸´
+//ç™»å½•è¯·æ±‚ã€å›å¤
 #define _DEF_PROTOCOL_LOGIN_RQ    _DEF_PROTOCOL_BASE +3
 #define _DEF_PROTOCOL_LOGIN_RS    _DEF_PROTOCOL_BASE +4
 
@@ -66,8 +66,8 @@
 
 typedef char PackType;
 
-#define _DEF_SIZE   45				//ÓÃ»§Ãû¡¢ÃÜÂë×î´ó³¤¶È
-#define _DEF_STREAMSIZE   4096		//Á÷³¤¶È
+#define _DEF_SIZE   45				//ç”¨æˆ·åã€å¯†ç æœ€å¤§é•¿åº¦
+#define _DEF_STREAMSIZE   4096		//æµé•¿åº¦
 #define _DEF_AUTHORLISTNUM   10
 #define _DEF_SQLLEN       300
 #define _role_audience   0
@@ -87,37 +87,37 @@ typedef char PackType;
 #define UM_ENTERFAILMSG			WM_USER + 7
 
 struct goodinfo{
-	int		m_gid;//ÎïÆ·ID
-	char 	m_ThingName[_DEF_SIZE];//ÎïÆ·´ÊÌõ
-	char 	m_FirstHint[_DEF_SIZE];//µÚÒ»ÌõÌáÊ¾
-	char 	m_SecondHint[_DEF_SIZE];//µÚ¶şÌõÌáÊ¾
-	char 	m_ThirdHint[_DEF_SIZE];//µÚÈıÌõÌáÊ¾
-	int		m_GuessTime;//ÎïÆ·´ÊÌõ¾ö¶¨Ê±¼ä
-	char 	m_AuthorName[_DEF_SIZE];//³öÌâÈËÃû
+	int		m_gid;//ç‰©å“ID
+	char 	m_ThingName[_DEF_SIZE];//ç‰©å“è¯æ¡
+	char 	m_FirstHint[_DEF_SIZE];//ç¬¬ä¸€æ¡æç¤º
+	char 	m_SecondHint[_DEF_SIZE];//ç¬¬äºŒæ¡æç¤º
+	char 	m_ThirdHint[_DEF_SIZE];//ç¬¬ä¸‰æ¡æç¤º
+	int		m_GuessTime;//ç‰©å“è¯æ¡å†³å®šæ—¶é—´
+	char 	m_AuthorName[_DEF_SIZE];//å‡ºé¢˜äººå
 };
 
-//===========================Ğ­Òé°ü½á¹¹¶¨Òå==============================
+//===========================åè®®åŒ…ç»“æ„å®šä¹‰==============================
 
-//×¢²á¡¢µÇÂ¼ÇëÇó°ü
+//æ³¨å†Œã€ç™»å½•è¯·æ±‚åŒ…
 typedef struct STRU_REGISTER_RQ
 {
 	PackType m_nType;
 	char     m_szUserName[_DEF_SIZE];
 	char     m_szPassWord[_DEF_SIZE];
-	int      m_szGender;//0´ú±íÅ®£¬1´ú±íÄĞ£¬2´ú±íÎ´ÖªĞÔ±ğ£¬3´ú±íµÇÂ¼ÇëÇó
+	int      m_szGender;//0ä»£è¡¨å¥³ï¼Œ1ä»£è¡¨ç”·ï¼Œ2ä»£è¡¨æœªçŸ¥æ€§åˆ«ï¼Œ3ä»£è¡¨ç™»å½•è¯·æ±‚
 	char	 m_szEmail[_DEF_SIZE];
 }STRU_LOGIN_RQ;
 
-//×¢²á¡¢µÇÂ¼»Ø¸´°ü
+//æ³¨å†Œã€ç™»å½•å›å¤åŒ…
 typedef struct STRU_REGISTER_RS
 {
 	PackType	m_nType;
 	char		m_szResult;
-	long long	m_userid;//ÓÃÓÚµÇÂ¼»Ø¸´
-	char		m_szUserName[_DEF_SIZE];//ÓÃÓÚµÇÂ¼»Ø¸´
+	long long	m_userid;//ç”¨äºç™»å½•å›å¤
+	char		m_szUserName[_DEF_SIZE];//ç”¨äºç™»å½•å›å¤
 }STRU_LOGIN_RS;
 
-//Á÷ĞÅÏ¢
+//æµä¿¡æ¯
 struct StreamInfo
 {
 	PackType m_nType;
@@ -126,71 +126,71 @@ struct StreamInfo
 	int       m_nLen;
 };
 
-//·¿Ö÷´´½¨·¿¼äÏûÏ¢¡¢·¿¼ä´´½¨·µ»ØÖµÏûÏ¢¡¢Íæ¼Ò½øÈë·¿¼äÏûÏ¢
+//æˆ¿ä¸»åˆ›å»ºæˆ¿é—´æ¶ˆæ¯ã€æˆ¿é—´åˆ›å»ºè¿”å›å€¼æ¶ˆæ¯ã€ç©å®¶è¿›å…¥æˆ¿é—´æ¶ˆæ¯
 typedef struct STRU_CREATEROOM_RQ{
 	PackType m_nType;
-	long long m_uid;//·¿Ö÷UID»ò¹ÛÖÚUID
-	char 	m_PlayerName[_DEF_SIZE];//·¿Ö÷ÓÃ»§Ãû»ò¹ÛÖÚÓÃ»§Ãû
-	long long m_roomid;//·¿¼äid£¬ÔÚ·¿¼ä´´½¨·µ»ØÖµÏûÏ¢ÖĞÓĞĞ§£¬ÈôÎª-1£¬ÔòËµÃ÷¿ª·¿Ê§°Ü£¬						ÔÚÍæ¼Ò½øÈë·¿¼äÏûÏ¢ÖĞÓĞĞ§£¬´ú±íÒª½øÈëµÄ·¿¼ä
+	long long m_uid;//æˆ¿ä¸»UIDæˆ–è§‚ä¼—UID
+	char 	m_PlayerName[_DEF_SIZE];//æˆ¿ä¸»ç”¨æˆ·åæˆ–è§‚ä¼—ç”¨æˆ·å
+	long long m_roomid;//æˆ¿é—´idï¼Œåœ¨æˆ¿é—´åˆ›å»ºè¿”å›å€¼æ¶ˆæ¯ä¸­æœ‰æ•ˆï¼Œè‹¥ä¸º-1ï¼Œåˆ™è¯´æ˜å¼€æˆ¿å¤±è´¥ï¼Œ						åœ¨ç©å®¶è¿›å…¥æˆ¿é—´æ¶ˆæ¯ä¸­æœ‰æ•ˆï¼Œä»£è¡¨è¦è¿›å…¥çš„æˆ¿é—´
 }STRU_CREATEROOM_RS,STRU_ENTERROOM_RQ;
 
-//ÈËÊıË¢ĞÂÏûÏ¢¡¢ÓÎÏ·¿ªÊ¼ÏûÏ¢
+//äººæ•°åˆ·æ–°æ¶ˆæ¯ã€æ¸¸æˆå¼€å§‹æ¶ˆæ¯
 typedef struct STRU_PLAYERNUMRENEW_RS{
 	PackType m_nType;
-	long long m_uid;//·¿Ö÷UID
-	long long m_roomid;//·¿¼äid
-	int m_playernum;//·¿¼äÈËÊı(°üÀ¨·¿Ö÷)£¬ÔÚÓÎÏ·¿ªÊ¼ÏûÏ¢ÖĞÎŞĞ§£¨ÖÃÎª-1£©
+	long long m_uid;//æˆ¿ä¸»UID
+	long long m_roomid;//æˆ¿é—´id
+	int m_playernum;//æˆ¿é—´äººæ•°(åŒ…æ‹¬æˆ¿ä¸»)ï¼Œåœ¨æ¸¸æˆå¼€å§‹æ¶ˆæ¯ä¸­æ— æ•ˆï¼ˆç½®ä¸º-1ï¼‰
 }STRU_GAMESTART_RQ;
 
-//ÓÎÏ·´ÊÌõÏûÏ¢
+//æ¸¸æˆè¯æ¡æ¶ˆæ¯
 struct STRU_GOODSINFO_RS{
 	PackType m_nType;
-	long long m_uid;//·¿Ö÷UID
-	long long m_roomid;//·¿¼äid
-	char 	m_ThingName[_DEF_SIZE];//ÎïÆ·´ÊÌõ
-	char 	m_FirstHint[_DEF_SIZE];//µÚÒ»ÌõÌáÊ¾
-	char 	m_SecondHint[_DEF_SIZE];//µÚ¶şÌõÌáÊ¾
-	char 	m_ThirdHint[_DEF_SIZE];//µÚÈıÌõÌáÊ¾
-	int		m_GuessTime;//ÎïÆ·´ÊÌõ¾ö¶¨Ê±¼ä
-	char 	m_AuthorName[_DEF_SIZE];//³öÌâÈËÃû
+	long long m_uid;//æˆ¿ä¸»UID
+	long long m_roomid;//æˆ¿é—´id
+	char 	m_ThingName[_DEF_SIZE];//ç‰©å“è¯æ¡
+	char 	m_FirstHint[_DEF_SIZE];//ç¬¬ä¸€æ¡æç¤º
+	char 	m_SecondHint[_DEF_SIZE];//ç¬¬äºŒæ¡æç¤º
+	char 	m_ThirdHint[_DEF_SIZE];//ç¬¬ä¸‰æ¡æç¤º
+	int		m_GuessTime;//ç‰©å“è¯æ¡å†³å®šæ—¶é—´
+	char 	m_AuthorName[_DEF_SIZE];//å‡ºé¢˜äººå
 };
 
-//¹ÛÖÚÏûÏ¢£¨°üÀ¨·şÎñÆ÷×ª·¢µÄ£©
+//è§‚ä¼—æ¶ˆæ¯ï¼ˆåŒ…æ‹¬æœåŠ¡å™¨è½¬å‘çš„ï¼‰
 typedef struct STRU_PLAYERMESSAG_RQ{
 	PackType	m_nType;
-	long long	m_playeruid;//·¢ÏûÏ¢Íæ¼ÒµÄUID
-	char		m_playername[_DEF_SIZE];//·¢ÏûÏ¢Íæ¼ÒµÄÓÃ»§Ãû
-	long long	m_roomid;//·¿¼äid
-	char 		m_MessageContent[_DEF_PLAYERMESSAG_SIZE];//ÏûÏ¢ÄÚÈİ
-	int			m_GuessResult;//²Â²â½á¹û£¬0ÎªÎ´²ÂÖĞ£¬1Îª²ÂÖĞ£¬2Îªµ±Ç°²»ÔÚÓÎÏ·½ø³ÌÖĞ
+	long long	m_playeruid;//å‘æ¶ˆæ¯ç©å®¶çš„UID
+	char		m_playername[_DEF_SIZE];//å‘æ¶ˆæ¯ç©å®¶çš„ç”¨æˆ·å
+	long long	m_roomid;//æˆ¿é—´id
+	char 		m_MessageContent[_DEF_PLAYERMESSAG_SIZE];//æ¶ˆæ¯å†…å®¹
+	int			m_GuessResult;//çŒœæµ‹ç»“æœï¼Œ0ä¸ºæœªçŒœä¸­ï¼Œ1ä¸ºçŒœä¸­ï¼Œ2ä¸ºå½“å‰ä¸åœ¨æ¸¸æˆè¿›ç¨‹ä¸­
 }STRU_PLAYERMESSAG_RS;
 
-//ÓÎÏ·µ½Ê±ÏûÏ¢
+//æ¸¸æˆåˆ°æ—¶æ¶ˆæ¯
 struct STRU_TIMEOVER_RS{
 	PackType m_nType;
-	long long m_roomid;//·¿¼äid
-	int 		m_PassNum;//²Â¶ÔµÄÍæ¼ÒÈËÊı
-	//Õâ¸ö½á¹¹ÌåºóÆÚ¿ÉÒÔ¾ßÌå¸üĞÂ£¬¸ù¾İ·şÎñÆ÷´æ´¢µÄ½á¹¹À´¶¨
+	long long m_roomid;//æˆ¿é—´id
+	int 		m_PassNum;//çŒœå¯¹çš„ç©å®¶äººæ•°
+	//è¿™ä¸ªç»“æ„ä½“åæœŸå¯ä»¥å…·ä½“æ›´æ–°ï¼Œæ ¹æ®æœåŠ¡å™¨å­˜å‚¨çš„ç»“æ„æ¥å®š
 };
 
-//ÍË·¿ÏûÏ¢¡¢·¿Ö÷¹Ø±Õ·¿¼äÏûÏ¢
+//é€€æˆ¿æ¶ˆæ¯ã€æˆ¿ä¸»å…³é—­æˆ¿é—´æ¶ˆæ¯
 typedef struct STRU_LEAVEROOM_RQ{
 	PackType m_nType;
-	long long m_roomid;//·¿¼äid
-	long long m_playeruid;//ÍË·¿Íæ¼ÒµÄUID
-	bool 	m_isRoomOwner;//ÊÇ·ñÎª·¿Ö÷
+	long long m_roomid;//æˆ¿é—´id
+	long long m_playeruid;//é€€æˆ¿ç©å®¶çš„UID
+	bool 	m_isRoomOwner;//æ˜¯å¦ä¸ºæˆ¿ä¸»
 }STRU_CLOSEROOM_RS;
  
-//ÏÂÏßÏûÏ¢
+//ä¸‹çº¿æ¶ˆæ¯
 struct STRU_LOGOUT_RQ{
 	PackType m_nType;
-	long long	m_userid;//ÏÂÏßµÄÍæ¼ÒID
+	long long	m_userid;//ä¸‹çº¿çš„ç©å®¶ID
 };
 
-//Íæ¼Ò½ø·¿Ê§°ÜÏûÏ¢
+//ç©å®¶è¿›æˆ¿å¤±è´¥æ¶ˆæ¯
 struct STRU_ENTERROOMFAIL_RS{
 	PackType m_nType;
-	int	result;//Ê§°ÜÔ­Òò
+	int	result;//å¤±è´¥åŸå› 
 };
 
 #endif
